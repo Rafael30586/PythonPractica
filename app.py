@@ -21,3 +21,4 @@ e = cadena[1:] # Va desde el segundo caracter hasta el último
 f = cadena[:4] # Desde el primero hasta el cuarto
 g = cadena3[:] # Toda la cadena completa
 print(g)
+
