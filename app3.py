@@ -34,3 +34,8 @@ else: # Los else de los bucles for se ejecutan si el bucle no se detiene por una
 
 for x in "Python": #Los strings son objetos iterables en python
     print(x)
+
+#Ejercicio: imprimir en pantalla los números pares del 1 al 8S con un bucle for
+for number in range(1,10):
+    if number % 2 == 0:
+        print(number)
