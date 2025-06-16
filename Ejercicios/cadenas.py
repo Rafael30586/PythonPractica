@@ -4,4 +4,4 @@
 nombre = input("Escriba su nombre")
 numero = int(input("Escriba un número entero"))
 
-print(nombre*numero) #Por ahora está incompleto, de esta manera imprime el nombre varias veces pero en la misma línea
+print((nombre+"\n")*numero) #Por ahora está incompleto, de esta manera imprime el nombre varias veces pero en la misma línea
