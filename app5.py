@@ -30,7 +30,7 @@ fecha_3 = datetime.datetime(2023,9,25,17,46,12) # Constructor que acepta año, m
 print(type(fecha_3))
 print(fecha_3)
 fecha_4_cadena = "4.12.2021"
-fecha_4 = datetime.datetime.strptime(fecha_4_cadena,"%d.%m.%Y") # Este método acepta un string y lo transforma en fecha. También hay que pasarle el formato como segundo argumento, lo caul, está detallado en la documentación
+fecha_4 = datetime.datetime.strptime(fecha_4_cadena,"%d.%m.%Y") # Este método acepta un string y lo transforma en fecha. También hay que pasarle el formato como segundo argumento, lo cual está detallado en la documentación
 print(fecha_4)
 diferencia_de_tiempo = fecha_de_hoy - otra_fecha
 print(diferencia_de_tiempo) # Las fechas pueden restarse y te dan la cantidad de días , horas, minutos, etc
