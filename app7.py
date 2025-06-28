@@ -31,3 +31,8 @@ a = 14
 a = 2
 a = "No da error"
 print(a) # Python es de tipado dinámico
+
+def restar_dos_numeros(x,y):
+    return x - y
+
+print(restar_dos_numeros(y=4,x=8)) # A las funcionaes se les pueden pasar los argumentos en diferente orden, siempre y cuansdo aclaremos su nombre
