@@ -13,6 +13,8 @@ my_img4 = ImageTk.PhotoImage(Image.open("C:/Users/User/Desktop/ProgramacionRafae
 
 image_list = [my_img1, my_img2, my_img3, my_img4]
 
+status = Label(root, text="image 1 of "+ str(len(image_list)), bd=1, relief=SUNKEN, anchor=E)
+
 
 my_label = Label(image=my_img1)
 my_label.grid(row=0, column=0, columnspan=3)
@@ -34,6 +36,9 @@ def forward(image_number):
     button_back.grid(row=1, column=0)
     button_forward.grid(row=1, column=2) 
 
+    status = Label(root, text="image " +str(image_number)+" of "+ str(len(image_list)), bd=1, relief=SUNKEN, anchor=E)
+    status.grid(row=2, column=0, columnspan=3, sticky=W+E)
+
 def back(image_number):
     global my_label
     global button_forward
@@ -51,13 +56,19 @@ def back(image_number):
     button_back.grid(row=1, column=0)
     button_forward.grid(row=1, column=2) 
 
+    # Actualización de barra de estado
+    status = Label(root, text="image " +str(image_number)+" of "+ str(len(image_list)), bd=1, relief=SUNKEN, anchor=E)
+    status.grid(row=2, column=0, columnspan=3, sticky=W+E)
+
 button_back = Button(root, text="<<", command=back, state=DISABLED)
 button_exit = Button(root, text="EXIT PROGRAM", command=root.quit)
 button_forward = Button(root, text=">>", command=lambda: forward(2))
 
 button_back.grid(row=1, column=0)
 button_exit.grid(row=1, column=1)
-button_forward.grid(row=1, column=2)
+button_forward.grid(row=1, column=2, pady=10)
+status.grid(row=2, column=0, columnspan=3, sticky=W+E) # El sicky parece estirar la etiqueta, en este caso,
+# de izquierda a derecha. W hace referencia a oeste, y E hace referencia a este
 
 # button_quit = Button(root, text='Exit program', command=root.quit)
 # button_quit.pack()
