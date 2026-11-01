@@ -24,7 +24,7 @@ def forward(image_number):
     global button_forward
     global button_back
 
-    my_label.grid_forget()
+    my_label.grid_forget() # borra a la etiqueta de la raíz
     my_label = Label(image=image_list[image_number-1])
     button_forward = Button(root, text=">>", command=lambda: forward(image_number+1))
     button_back = Button(root, text="<<", command=lambda: back(image_number-1))
