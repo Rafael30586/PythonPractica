@@ -15,4 +15,3 @@ button_quit.pack()
 
 root.mainloop()
 
-# Continuar trabajando con imágenes con el video de freecode camp
